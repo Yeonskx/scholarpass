@@ -30,6 +30,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -38,10 +44,12 @@
       <img src="images/logo.png" alt="" />
       <div class="navigation">
         <ul>
+          <i id="menu-close" class="fa-solid fa-x"></i>
           <li><a href="#">Home</a></li>
           <li><a href="#">Students</a></li>
           <li><a href="#">Scholarship Provider</a></li>
         </ul>
+        <img id="menu-btn" src="images/menu.png" alt="" />
       </div>
     </nav>
 
@@ -506,6 +514,15 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      $("#menu-btn").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
 
     <!-- Swiper Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
